@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- fontAwesome-cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- cdn-link-tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Editor</title>
+    </head>
+    <body>
+        <section class="w-full h-screen bg-slate-300 flex justify-center items-center">
+            <div class="w-3/4 h-3/4 bg-slate-50">
+                <div class="py-4 px-3 border-b-2 grid grid-cols-3 bg-emerald-400">
+                    <div class="">
+                        <button id="boldId" class="pr-4"><i class="fa-solid fa-b"></i></button>
+                        <button id="italic" class="pr-4"><i class="fa-solid fa-italic"></i></button>
+                        <button id="under-line" class="pr-4"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <div>
+                        <button onclick="f3()" id="text-left" class="pr-4"><i class="fa-solid fa-align-left"></i></button>
+                        <button onclick="f4()" id="text-center" class="pr-4"><i class="fa-solid fa-align-center"></i></button>
+                        <button onclick="f5()" id="text-right" class="pr-4"><i class="fa-solid fa-align-right"></i></button>
+                        <button onclick="f6()" id="text-justify" class="pr-4"><i class="fa-solid fa-align-justify"></i></button>
+                    </div>
+                    <div>
+                        <button onclick="f7()" class="pr-4 text-2xl">aA</button>
+                        <button onchange="f8(this)" class="pr-4"><input type="color"></button>
+                        <input onchange="f16(this)" type="number" class="outline-0 border-0 w-12 text-1xl" min="16" max="100" value="16">
+                    </div>
+                </div>
+                <div>
+                    <textarea name="" id="textarea" class="resize-none w-full h-96 bg-slate-100 outline-none p-5"></textarea>
+                </div>
+            </div>
+        </section>
+        <!-- js-link -->
+        <script src="./apps.js"></script>
+    </body>
+</html>
